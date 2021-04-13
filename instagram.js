@@ -212,7 +212,7 @@ Usuario.destroy({ where: {id: [6,12,13,14,15,16,17]}}).then((resultado) => {
 
 // Usuario.findByPk(1, {
 //     include: [
-//         {assocation:"posts"}
+//         {association:"posts"}
 //     ]
 // }).then((usuario) => {
 //     console.table(usuario.posts.map((post) => post.toJSON()))
@@ -226,8 +226,8 @@ Usuario.destroy({ where: {id: [6,12,13,14,15,16,17]}}).then((resultado) => {
 // )
 
 Post.findByPk(1,{include:['comentarios']}).then(
-    post => {
-        console.log(post.toJSON());
+    coment => {
+        console.log(coment.toJSON());
         sequelize.close();
     }
 )
